@@ -61,7 +61,7 @@ int main(int argc, char ** argv)
   target_pose.position.y = 0.0;
   target_pose.position.z = 0.5;
 
-  // Simple orientation (quaternion), facing forward
+  // Simple orientation (quaternion), fastd::cing forward
   target_pose.orientation.x = 0.0;
   target_pose.orientation.y = 0.7071068;  
   target_pose.orientation.z = 0.0;
@@ -72,7 +72,7 @@ int main(int argc, char ** argv)
   target_pose2.position.y = 0.0;
   target_pose2.position.z = 0.5;
 
-  // Simple orientation (quaternion), facing forward
+  // Simple orientation (quaternion), fastd::cing forward
   target_pose2.orientation.x = 0.5;
   target_pose2.orientation.y = 0.5;  
   target_pose2.orientation.z = 0.5;
@@ -89,8 +89,8 @@ int main(int argc, char ** argv)
 
   while (input != ' ')
   {
-      cout << "Press Space to close the gripper: ";
-      cin >> input;
+      std::cout << "Press Space to close the gripper: ";
+      std::cin >> input;
   }
   // vector<int> v = {0, 1, 2};
   // int state = 0;
@@ -102,12 +102,11 @@ int main(int argc, char ** argv)
   } catch (const std::exception & e) {
     RCLCPP_ERROR(node->get_logger(), "Motion planning failed: %s", e.what());
   }
-  char input = 'a';
 
   while (input != ' ')
   {
-      cout << "Press Space to close the gripper: ";
-      cin >> input;
+      std::cout << "Press Space to close the gripper: ";
+      std::cin >> input;
   }
   // vector<int> v = {0, 1, 2};
   // int state = 0;
@@ -116,13 +115,13 @@ int main(int argc, char ** argv)
   // {
 
   //   if (input == ' ') {
-  //       cout << "Hai premuto spazio." << endl;
+  //       std::cout << "Hai premuto spazio." << endl;
   //   } else if (input == 'y') {
-  //       cout << "Hai premuto y." << endl;
+  //       std::cout << "Hai premuto y." << endl;
   //   } else if (input == 'n') {
-  //       cout << "Hai premuto n." << endl;
+  //       std::cout << "Hai premuto n." << endl;
   //   } else {
-  //       cout << "Hai premuto: " << input << endl;
+  //       std::cout << "Hai premuto: " << input << endl;
   //   }
   // }
 
