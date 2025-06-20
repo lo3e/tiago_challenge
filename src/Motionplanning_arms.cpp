@@ -334,7 +334,7 @@ void icr_Motionplanning_arms::motion_planning_control(
   group_arm.setPoseTarget(target_pose, end_effector_link);
 
   // Set planner parameters
-  group_arm.setPlannerId("SBLkConfigDefault");
+  group_arm.setPlannerId("RRTConnectkConfigDefault");
   group_arm.setStartStateToCurrentState();
   group_arm.setMaxVelocityScalingFactor(1.0);
   group_arm.setNumPlanningAttempts(5);
